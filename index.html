@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="post">
+        <h1>Create Student</h1>
+        <input name="name" type="text" placeholder="Enter Name">
+        <input name="score" type="text" placeholder="Enter Score">
+        <input type="submit" value="Create Student">
+    </form>
+    <h1>List of Student</h1>
+    {{range .}}
+    <ul>
+        <li>Name: {{.Name}}</li>
+        <li>Score: {{.Score}}</li>
+        <li>Ranking: {{.Ranking}}</li>
+        <li>Passed: {{.IsPassed}}</li>
+    </ul>
+    {{end}}
+</body>
+
+</html>
